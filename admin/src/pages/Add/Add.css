@@ -1,0 +1,141 @@
+.add {
+    width: 70%;
+    margin-left: max(5vw,25px);
+    margin-top: 50px;
+    color: #6d6d6d;
+    font-size: 16px;
+}
+
+.add form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.add-img-upload img {
+    width: 120px;
+}
+
+/* Make both containers same width */
+.add-product-name,
+.add-product-description {
+    width: 100%;
+    max-width: 500px; /* adjust if needed */
+}
+
+/* Make input and textarea same width */
+.add-product-name input,
+.add-product-description textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; /* VERY IMPORTANT */
+}
+
+.add-category-price{
+    display: flex;
+    gap: 30px;
+}
+.add-category-price select, .add-category-price input{
+    max-width: 120px;
+    padding: 10px;
+}
+.add-btn{
+     max-width: 120px;
+    border: none;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+/* ── Tab switcher ── */
+.add-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.add-tab-btn {
+  padding: 10px 22px;
+  border: 2px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.add-tab-btn.active {
+  background: black;
+  color: white;
+  border-color: black;
+}
+
+/* ── Package meta row ── */
+.add-pkg-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.add-pkg-meta select {
+  padding: 10px;
+  min-width: 130px;
+}
+
+/* ── Package name preview ── */
+.pkg-name-preview {
+  background: #f0f4ff;
+  border-left: 4px solid #3a5bd9;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  max-width: 500px;
+}
+/* ── Catering Item Visual Elements section ── */
+.add-elements-section {
+  max-width: 500px;
+}
+
+.add-elements-heading {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.add-elements-heading span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #999;
+}
+
+.add-elements-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.add-element-field p {
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #555;
+}
+
+.add-element-field textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  resize: vertical;
+  box-sizing: border-box;
+  color: #333;
+  font-family: inherit;
+}
+
+.add-element-field textarea:focus {
+  outline: none;
+  border-color: #534ab7;
+}

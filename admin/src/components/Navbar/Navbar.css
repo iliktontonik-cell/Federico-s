@@ -1,0 +1,16 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* push logo left, profile right */
+    align-items: flex-start;        /* align items to the top */
+    padding: 8px;
+}
+
+.logo {
+    width: 150px; /* keep original size */
+    height: auto;
+}
+
+.profile {
+    width: 40px; /* keep original size */
+    height: auto;
+}

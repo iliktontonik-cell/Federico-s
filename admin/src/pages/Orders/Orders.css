@@ -1,0 +1,356 @@
+/* ============================================================
+   Orders.css — Food Industry / Light Modern Theme
+   Aesthetic: Fresh restaurant dashboard with warm food colors
+   Font: Poppins + Nunito
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ── Root Variables ────────────────────────────────────────── */
+:root {
+  --bg: #fffaf3;
+  --surface: #ffffff;
+  --surface-2: #fff3e6;
+  --border: #f1dcc2;
+  --border-hover: #f4b266;
+
+  --accent: #ff7a00;
+  --accent-light: #ffeddc;
+  --accent-dark: #e66700;
+
+  --text-primary: #2d2a26;
+  --text-secondary: #6f6257;
+  --text-muted: #b0a395;
+
+  --green: #22c55e;
+  --yellow: #f59e0b;
+  --blue: #3b82f6;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+
+  --shadow-card: 0 8px 24px rgba(255, 122, 0, 0.08);
+
+  --transition: 0.25s ease;
+}
+
+/* ── Main Layout ───────────────────────────────────────────── */
+.order.add {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #fffaf3, #fff5eb);
+  min-height: 100vh;
+  padding: 40px 32px 60px;
+  color: var(--text-primary);
+  box-sizing: border-box;
+}
+
+/* ── Page Heading ──────────────────────────────────────────── */
+.order.add h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 35px;
+  position: relative;
+  display: inline-block;
+}
+
+.order.add h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 70px;
+  height: 5px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--accent), #ffb067);
+}
+
+/* ── Order List ────────────────────────────────────────────── */
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Order Card ────────────────────────────────────────────── */
+.order-item {
+  display: grid;
+  grid-template-columns: 70px 1fr auto auto auto;
+  align-items: center;
+  gap: 20px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+
+  padding: 22px;
+  box-shadow: var(--shadow-card);
+
+  transition: all var(--transition);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.order-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(to bottom, var(--accent), #ffb067);
+}
+
+.order-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: 0 14px 32px rgba(255, 122, 0, 0.14);
+}
+
+/* ── Food Icon ─────────────────────────────────────────────── */
+.order-item > img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+
+  background: var(--surface-2);
+  border-radius: 16px;
+  padding: 10px;
+
+  border: 1px solid #ffe0bd;
+
+  transition: transform var(--transition);
+}
+
+.order-item:hover > img {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+/* ── Details Section ───────────────────────────────────────── */
+.order-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+/* Ordered food */
+.order-item-food {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Customer name */
+.order-item-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Address */
+.order-item-address {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.order-item-address p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* Phone */
+.order-item-phone {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  margin-top: 4px;
+}
+
+/* ── Pills ─────────────────────────────────────────────────── */
+.order-item > p {
+  background: var(--surface-2);
+  border: 1px solid #ffe3c2;
+
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+
+  white-space: nowrap;
+}
+
+.order-item > p:last-of-type {
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  border-color: #ffd0a1;
+}
+
+/* ── Status Select ─────────────────────────────────────────── */
+.order-item select {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+
+  background: white;
+  color: var(--text-primary);
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  padding: 10px 36px 10px 14px;
+
+  cursor: pointer;
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23ff7a00' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+
+  transition: all var(--transition);
+
+  min-width: 165px;
+}
+
+.order-item select:hover {
+  border-color: var(--accent);
+  background-color: #fffaf5;
+}
+
+.order-item select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(255, 122, 0, 0.12);
+}
+
+/* Status Styles */
+.order-item select.status-processing {
+  border-left: 5px solid var(--blue);
+}
+
+.order-item select.status-out {
+  border-left: 5px solid var(--yellow);
+}
+
+.order-item select.status-delivered {
+  border-left: 5px solid var(--green);
+}
+
+/* ── Empty State ───────────────────────────────────────────── */
+.order-list:empty::after {
+  content: 'No food orders available 🍽️';
+  display: block;
+
+  text-align: center;
+
+  padding: 70px 0;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: var(--text-muted);
+}
+
+/* ── Animation ─────────────────────────────────────────────── */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.order-item {
+  animation: fadeSlideUp 0.4s ease both;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .order-item {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .order-item > img {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .order-item > div {
+    grid-column: 2;
+  }
+
+  .order-item > p,
+  .order-item select {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 560px) {
+  .order.add {
+    padding: 20px 14px 40px;
+  }
+
+  .order.add h3 {
+    font-size: 1.6rem;
+  }
+
+  .order-item {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .order-item-food {
+    white-space: normal;
+  }
+
+  .order-item select {
+    width: 100%;
+  }
+}
+.order-remove-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.2s;
+}
+
+.order-remove-btn:hover {
+    background-color: #cc0000;
+}
+.order-remove-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.2s;
+}
+
+.order-remove-btn:hover {
+    background-color: #cc0000;
+}
