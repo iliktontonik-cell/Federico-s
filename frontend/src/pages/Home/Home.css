@@ -1,0 +1,28 @@
+.catering-booking-home {
+  margin: 60px auto;
+  padding: 40px 20px;
+  background: #f6b042;
+  text-align: center;
+  border-radius: 16px;
+  color: white;
+}
+
+.catering-booking-home h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.catering-booking-home p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.catering-booking-btn {
+  padding: 12px 30px;
+  background-color: #323232;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}

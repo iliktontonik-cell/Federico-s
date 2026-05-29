@@ -1,0 +1,290 @@
+.event-design-page {
+  min-height: 100vh;
+  background: #f7f8fc;
+  padding: 30px;
+}
+
+/* HEADER */
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.event-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.event-subtitle {
+  color: #6b7280;
+  margin-bottom: 5px;
+}
+
+.selected-pill {
+  background: #111827;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+/* CATEGORY */
+
+.category-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  margin-bottom: 35px;
+}
+
+.category-chip {
+  border: none;
+  background: white;
+  padding: 12px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.category-chip:hover {
+  transform: translateY(-2px);
+}
+
+.category-chip.active {
+  background: #111827;
+  color: white;
+}
+
+/* CARD */
+
+.package-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.35s ease;
+  border: 3px solid transparent;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+}
+
+.package-card.active {
+  border-color: #111827;
+  transform: translateY(-5px);
+}
+
+.package-image-wrapper {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+.package-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.package-card:hover .package-image {
+  transform: scale(1.05);
+}
+
+.package-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(17, 24, 39, 0.9);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.package-content {
+  padding: 22px;
+}
+
+.package-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.package-content p {
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+
+.select-btn,
+.primary-btn,
+.secondary-btn {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  background: #111827;
+  color: white;
+}
+
+.primary-btn:hover {
+  opacity: 0.9;
+}
+
+.secondary-btn {
+  background: white;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+.select-btn {
+  width: 100%;
+  background: #111827;
+  color: white;
+}
+
+/* FOOTER */
+
+.bottom-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+/* COMING SOON */
+
+.coming-soon-card {
+  background: white;
+  padding: 60px 20px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.coming-soon-card h2 {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.coming-soon-card p {
+  color: #6b7280;
+}
+
+/* EMPTY */
+
+.event-design-empty {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 20px;
+}
+/* IMAGE HINT */
+
+.zoom-hint {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  backdrop-filter: blur(5px);
+}
+
+/* MODAL */
+
+.image-preview-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: fadeIn 0.25s ease;
+}
+
+.preview-image {
+  max-width: 95%;
+  max-height: 95vh;
+  border-radius: 20px;
+  object-fit: contain;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.25s ease;
+}
+
+.close-preview {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.close-preview:hover {
+  background: white;
+  color: black;
+  transform: rotate(90deg);
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.package-price {
+  font-size: 1.3rem;
+  font-weight: 900; /* bolder */
+  color: #c8a96e;
+  margin: 4px 0 8px;
+}

@@ -1,0 +1,42 @@
+import axios from "axios";
+import { useEffect } from "react";
+import { useSearchParams, useNavigate } from "react-router-dom";
+
+const BookingVerify = () => {
+
+    const [searchParams] = useSearchParams();
+
+    const success = searchParams.get("success");
+    const bookingId = searchParams.get("bookingId");
+
+    const navigate = useNavigate();
+
+    const verifyPayment = async () => {
+
+        const response = await axios.post(
+            "http://localhost:5000/api/booking/verify",
+            {
+                success,
+                bookingId
+            }
+        );
+
+        if (response.data.success) {
+            navigate("/mybookings");
+        } else {
+            navigate("/");
+        }
+    };
+
+    useEffect(() => {
+        verifyPayment();
+    }, []);
+
+    return (
+        <div>
+            Verifying Payment...
+        </div>
+    );
+};
+
+export default BookingVerify;

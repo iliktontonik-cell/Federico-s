@@ -1,0 +1,156 @@
+.cart {
+    margin: 100px;
+}
+
+/* Header row */
+.cart-items-title {
+    display: grid;
+    grid-template-columns: 80px 2fr 1fr 1fr 1fr 80px;
+    align-items: center;
+    color: grey;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+/* Each cart item row */
+.cart-items-item {
+    display: grid;
+    grid-template-columns: 80px 2fr 1fr 1fr 1fr 80px;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Image */
+.cart-items-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Text alignment */
+.cart-items-item p,
+.cart-items-title p {
+    margin: 0;
+}
+
+/* Center numbers */
+.cart-items-item p:nth-child(3),
+.cart-items-item p:nth-child(4),
+.cart-items-item p:nth-child(5),
+.cart-items-title p:nth-child(3),
+.cart-items-title p:nth-child(4),
+.cart-items-title p:nth-child(5) {
+    text-align: center;
+}
+
+/* Remove button */
+.cart-items-item button {
+    padding: 6px 10px;
+    border: none;
+    background-color: #ff4d4d;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-items-item button:hover {
+    background-color: #e60000;
+}
+/* ===================== */
+/* CART BOTTOM SECTION   */
+/* ===================== */
+
+.cart-bottom {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* CART TOTAL BOX */
+.cart-total {
+    flex: 1;
+    min-width: 300px;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+
+.cart-total h2 {
+    margin-bottom: 20px;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.cart-total button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cart-total button:hover {
+    background-color: #333;
+}
+
+/* PROMO CODE SECTION */
+.cart-promcode {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cart-promcode p {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 14px;
+}
+
+.cart-promcode-input {
+    display: flex;
+    gap: 10px;
+}
+
+.cart-promcode-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.cart-promcode-input button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cart-promcode-input button:hover {
+    background-color: #218838;
+}
+
+/* RESPONSIVE */
+@media (max-width: 750px) {
+    .cart-bottom {
+        flex-direction: column-reverse;
+    }
+    .cart-promcode{
+        justify-content: start;
+    }
+}

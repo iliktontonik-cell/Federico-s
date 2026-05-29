@@ -1,0 +1,68 @@
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/Header1.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+
+    /* Only curve the left and right sides */
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    overflow: hidden; /* keeps the image inside curves */
+}
+
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 'start' is okay, but 'flex-start' is more standard */
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 0; /* stick to bottom */
+    left: 6vw;
+    padding-bottom: 2vw; /* optional: add some padding from bottom */
+    animation: fadeIn 3s;
+    
+}
+
+.header-contents h2{
+    font-weight: 500;
+    color: white;
+    font-size: max(4.5vw, 22px);
+}
+.header-contents p{
+    color: white;
+    font-size: 1vw;
+
+}
+
+.header-contents button{
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    border-radius: 50px;
+}
+
+@media (max-width:1050px) {
+    .header{
+        height: 38vw;
+    }
+    .header-contents{
+        max-width: 45%;
+    }
+}
+@media (max-width:1050px) {
+
+    .header-contents{
+        display: none;
+    }
+    .header-contents button{
+        padding: 2vw 4vw ;
+    }
+}

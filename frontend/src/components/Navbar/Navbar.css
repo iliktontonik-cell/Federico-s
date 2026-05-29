@@ -1,0 +1,210 @@
+.navbar {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 160px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: #49557e;
+  font-size: 18px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #49557e;
+  transition: color 0.3s;
+}
+
+.navbar-menu a:hover,
+.navbar-menu a.active {
+  color: tomato;
+  padding-bottom: 4px;
+  border-bottom: 2px solid tomato;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar button {
+  background: transparent;
+  font-size: 16px;
+  color: #49557e;
+  border: 1px solid tomato;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #fff4f2;
+}
+
+.navbar li {
+  cursor: pointer;
+}
+
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon img {
+  width: 24px;
+  cursor: pointer;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: tomato;
+  border-radius: 5px;
+  top: -8px;
+  right: 8px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: tomato;
+  color: white;
+  font-size: 12px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.navbar-profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar-profile > img {
+  width: 32px;
+  height: 32px;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.navbar-profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 12px);
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 12px;
+  list-style: none;
+  min-width: 160px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  z-index: 100;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.navbar-profile-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+/* REMOVED: .navbar-profile:hover .navbar-profile-dropdown — now controlled by React */
+
+.navbar-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: #49557e;
+  font-size: 15px;
+  transition: background 0.2s;
+}
+
+.navbar-profile-dropdown li:hover {
+  background-color: #fff4f2;
+  color: tomato;
+}
+
+.navbar-profile-dropdown li img {
+  width: 18px;
+  height: 18px;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.navbar-profile-dropdown hr {
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  margin: 4px 0;
+}
+
+@media (max-width: 1050px) {
+  .navbar-logo {
+    width: 140px;
+    height: auto;
+  }
+  .navbar-menu {
+    gap: 20px;
+    font-size: 17px;
+  }
+  .navbar-right {
+    gap: 30px;
+  }
+  .navbar-right img {
+    width: 22px;
+  }
+  .navbar-right button {
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar-logo {
+    width: 120px;
+    height: auto;
+  }
+  .navbar-menu {
+    gap: 15px;
+    font-size: 16px;
+  }
+  .navbar-right {
+    gap: 20px;
+  }
+  .navbar-right img {
+    width: 20px;
+  }
+  .navbar-right button {
+    padding: 7px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none;
+  }
+}
